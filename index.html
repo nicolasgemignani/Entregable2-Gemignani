@@ -1,38 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Vinculo Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- Vinculo CSS -->
     <link rel="stylesheet" href="style/style.css">
     <title>Document</title>
 </head>
-
+<!-- 
+    Puntos por terminar
+    Terminar responsive
+    Guardar array en localstorage
+    Archivo JSON?
+ -->
 <body class="container">
     <header>
-        <section class="container pt-5">
+        <!-- Calculadora -->
+        <section class="container pt-5 anchoCalculadora">
             <div class="row">
-                <input class="col-12" type="text" name="" id="">
-                <input class="col-6" type="button" value="1">
-                <input class="col-6" type="button" value="2">
-                <input class="col-6" type="button" value="3">
-                <input class="col-6" type="button" value="4">
-                <input class="col-6" type="button" value="5">
-                <input class="col-6" type="button" value="6">
-                <input class="col-6" type="button" value="7">
-                <input class="col-6" type="button" value="8">
-                <input class="col-6" type="button" value="9">
-                <input class="col-6" type="button" value="0">
-                <input class="col-3" type="button" value="+">
-                <input class="col-3" type="button" value="-">
-                <input class="col-3" type="button" value="*">
-                <input class="col-3" type="button" value="/">
-                <input class="col-12" type="button" value="=">
+                <input type="text" class="col-6" name="valor" id="valor" readonly>
+                <input type="button" class="col-3" value="<x" onclick="sacarValor()">
+                <input type="button" class="col-3" value="AC" onclick="borrar()">
+                <input type="button" class="col-3" value="1" onclick="agregarValor('1')">
+                <input type="button" class="col-3" value="2" onclick="agregarValor('2')">
+                <input type="button" class="col-3" value="3" onclick="agregarValor('3')">
+                <input type="button" class="col-3" value="+" onclick="agregarValor('+')">
+                <input type="button" class="col-3" value="4" onclick="agregarValor('4')">
+                <input type="button" class="col-3" value="5" onclick="agregarValor('5')">
+                <input type="button" class="col-3" value="6" onclick="agregarValor('6')">
+                <input type="button" class="col-3" value="-" onclick="agregarValor('-')">
+                <input type="button" class="col-3" value="7" onclick="agregarValor('7')">
+                <input type="button" class="col-3" value="8" onclick="agregarValor('8')">
+                <input type="button" class="col-3" value="9" onclick="agregarValor('9')">
+                <input type="button" class="col-3" value="*" onclick="agregarValor('*')">
+                <input type="button" class="col-3" value="0" onclick="agregarValor('0')">
+                <input type="button" class="col-3" value="." onclick="agregarValor('.')">
+                <input type="button" class="col-3" value="=" onclick="calcular()">
+                <input type="button" class="col-3" value="/" onclick="agregarValor('/')">
             </div>
         </section>
+        <div class="mt-3 mb-3">
+            <h1 class="">Historial</h1>
+        </div>
+        <div class="">
+            <textarea id="historial" cols="44" rows="10" readonly></textarea>
+        </div>
     </header>
     <main>
 
@@ -41,7 +57,9 @@
 
     </footer>
     <!-- Vinculo JS bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
     <!-- Vinculo JS -->
     <script src="js/index.js"></script>
 </body>
