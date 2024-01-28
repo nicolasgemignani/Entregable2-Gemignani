@@ -2,10 +2,10 @@ body{
     background-color: blue;
 }
 
-.anchoCalculadora{
+.ancho{
     max-width: 50rem;
 }
 
-h1{
-    color: white;
+.padingLeft{
+    padding-left: 0;
 }
